@@ -1,0 +1,17 @@
+[package]
+name = "gen-fsm-evolve"
+description = "Genetic algorithm evolution engine for gen-fsm — evolves optimal stochastic transition matrices through simulation."
+categories = ["algorithms", "simulation", "science"]
+keywords = ["genetic-algorithm", "evolution", "optimization", "fsm"]
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+gen-fsm = { workspace = true, features = ["std"] }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

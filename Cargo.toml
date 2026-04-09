@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/gen-fsm",
+    "crates/gen-fsm-evolve",
+    "examples/drone_nav",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["meyzd"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/meyzd/gen-fsm"
+
+[workspace.dependencies]
+gen-fsm = { path = "crates/gen-fsm" }
+rand = "0.8"
+rayon = "1.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

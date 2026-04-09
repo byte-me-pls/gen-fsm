@@ -1,0 +1,14 @@
+[package]
+name = "drone-nav"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "drone-nav"
+path = "src/main.rs"
+
+[dependencies]
+gen-fsm = { path = "../../crates/gen-fsm", features = ["std"] }
+gen-fsm-evolve = { path = "../../crates/gen-fsm-evolve" }
+rand = "0.8"

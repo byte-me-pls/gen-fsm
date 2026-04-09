@@ -1,0 +1,21 @@
+[package]
+name = "gen-fsm"
+description = "A no_std genetic finite state machine with stochastic transition matrices for autonomous systems, robotics, and embedded devices."
+categories = ["no-std", "embedded", "algorithms", "simulation"]
+keywords = ["fsm", "genetic-algorithm", "stochastic", "embedded", "robotics"]
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+std = []
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { workspace = true, optional = true }
+
+[dev-dependencies]
+# Tests run with std
