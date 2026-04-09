@@ -1,4 +1,4 @@
-# 🧬 gen-fsm (Genetic Finite State Machine)
+# gen-fsm (Genetic Finite State Machine)
 
 [![Rust](https://img.shields.io/badge/rust-stable-brightgreen.svg)](https://www.rust-lang.org)
 [![no_std](https://img.shields.io/badge/no__std-compatible-blue.svg)](#)
@@ -13,17 +13,7 @@ Geleneksel kontrol sistemlerindeki katı, kuralcı (if/else tabanlı) ve öngör
 
 ---
 
-## 🌟 Neden Gen-FSM?
-
-Otonom bir drone veya çizgi izleyen robot kodladığınızı düşünün. Duvara yaklaşınca ne yapacak? Sensörler gürültülü (noisy) bir veri okuduğunda nasıl davranacak?
-
-Klasik `if/else` blokları karmaşık ortamlarda yönetilemez hale gelir. Gen-FSM ile:
-
-1. **Simüle Et ve Evrimleştir**: Sisteminizin hedeflerine (fitness) en uygun olasılık matrisini bilgisayarınızda dakikalar içinde hesaplatın (Evrim Motoru).
-2. **Sıfır Maliyet (Zero-Cost)**: Ortaya çıkan bu optimize edilmiş, hafif "Yapay DNA"yı doğrudan mikrodenetleyicilere (STM32, ESP32 vb.) gömün.
-3. **Adaptasyon**: Dronelarınıza veya endüstriyel robotlarınıza sadece bir hedefe ulaşmayı değil, hayatta kalmayı ve ortama adapte olmayı öğretin.
-
-## 🏗️ Mimari Yapı
+## Mimari Yapı
 
 Proje iki ana bileşenden (crate) oluşmaktadır:
 
@@ -41,7 +31,7 @@ Proje iki ana bileşenden (crate) oluşmaktadır:
 
 ---
 
-## 🚀 Örnek Kullanım (Study Case: Drone Navigation)
+## Örnek Kullanım (Study Case: Drone Navigation)
 
 Proje içerisinde yer alan `drone_nav` örneği, Gen-FSM'in gücünü göstermek için tasarlanmıştır. Engellerle dolu 2 boyutlu bir ızgara (grid) ortamında, drone hedefine ulaşmak için hangi sensör verisinde (Bağlam/Context) nasıl davranması (Durum/State) gerektiğini kendi kendine öğrenir.
 
@@ -62,7 +52,7 @@ pub const DRONE_DNA: [f32; 64] = [
 ];
 ```
 
-## 🛠️ Kurulum ve Derleme
+## Kurulum ve Derleme
 
 Bu proje `cargo` çalışma alanlarına (workspace) göre yapılandırılmıştır.
 
@@ -77,17 +67,3 @@ cargo build --all-targets
 # Tüm birim testlerini (Genetik algoritmalar ve Matrix yapıları vb.) çalıştırın
 cargo test --all-targets
 ```
-
-## ⏳ Gelecek Planları & Yol Haritası (Roadmap)
-
-- [x] Çekirdek Stokastik FSM Motoru (`no_std` uyumlu).
-- [x] Evrim Motoru ve Genetik Algoritma Yapıları.
-- [x] Gömülü Sistemler İçin C & Rust DNA Exporter.
-- [x] İlk Study Case (Örnek: `drone_nav`).
-- [ ] İkinci Study Case (Örnek: Çizgi İzleyen / Line Follower Robot).
-- [ ] Detaylı API Dokümantasyonunun (`rustdoc`) hazırlanması.
-- [ ] GitHub Actions CI/CD (Sürekli Entegrasyon) ve otomatik test pipeline'larının kurulması.
-
-## 📄 Lisans
-
-Bu proje, açık kaynaklı olarak geliştirilmektedir. Lisans detayları daha sonra eklenecektir.
