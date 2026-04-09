@@ -11,7 +11,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["meyzd"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/meyzd/gen-fsm"
+repository = "https://github.com/byte-me-pls/gen-fsm"
 
 [workspace.dependencies]
 gen-fsm = { path = "crates/gen-fsm" }
